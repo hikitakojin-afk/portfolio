@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;600&display=swap');
+
+:root {
+  /* Modern Digital Oscilloscope Palette */
+  --bg-canvas: #2a2a2e;
+  /* Neutral dark grey background */
+
+  /* Physical Hardware */
+  --device-case: #e8eaed;
+  /* Light, rigid industrial grey plastic */
+  --device-case-dark: #cbd0d8;
+  /* Darker plastic accents/shadows */
+  --button-base: #f1f3f4;
+  /* Physical button color */
+  --button-active-cyan: #00e5ff;
+  /* Cyan channel backlight */
+  --button-active-magenta: #ff00ff;
+  /* Magenta channel backlight */
+  --button-active-yellow: #ffeb3b;
+  /* Yellow channel backlight */
+  --button-active-green: #00ff2a;
+  /* Green channel backlight */
+
+  /* Digital Screen */
+  --device-screen: #000000;
+  /* Pure black LCD */
+  --bezel-color: #111111;
+  /* Thick black plastic bezel */
+
+  /* Text & Data */
+  --text-dark: #333333;
+  /* Dark text on physical buttons */
+  --text-light: #ffffff;
+  /* General white text on screen */
+  --text-muted: #777777;
+  /* Dim text on screen/buttons */
+
+  /* Digital Channels */
+  --ch1-yellow: #ffeb3b;
+  --ch2-magenta: #ff00ff;
+  --ch3-cyan: #00e5ff;
+  --ch4-green: #00ff2a;
+
+  --border-hard: #111111;
+  /* Borders for physical cuts */
+  --border-panel: #cbd0d8;
+  /* Borders for plastic panels */
+
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+/* Global Utility Classes */
+.channel-text-1 {
+  color: var(--ch1-yellow);
+}
+
+.channel-text-2 {
+  color: var(--ch2-magenta);
+}
+
+.channel-text-3 {
+  color: var(--ch3-cyan);
+}
+
+.channel-text-4 {
+  color: var(--ch4-green);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Prevent scrolling horizontally, allow vertical if needed globally */
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-dark);
+  /* Default to dark text for the physical shell */
+  font-family: var(--font-sans);
+  /* Use sans for physical labels, mono for screen */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* Digital Monospace Utility */
+.mono-text {
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+/* Connection dotted lines */
+.dashed-line {
+  border-left: 2px dashed #333;
+}
+
+.dashed-line-horizontal {
+  border-top: 2px dashed #333;
+}

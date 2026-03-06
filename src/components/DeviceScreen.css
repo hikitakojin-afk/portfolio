@@ -1,0 +1,92 @@
+.device-screen-container {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.led-screen {
+    background-color: var(--device-screen);
+    border: 3px solid var(--bezel-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    /* Inner shadow for digital screen depth */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%,
+            rgba(0, 0, 0, 0.25));
+    background-size: 100% 4px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.screen-content {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    text-shadow: 0 0 8px currentColor;
+    /* Glow effect */
+}
+
+.screen-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.label {
+    color: var(--text-muted);
+    min-width: 60px;
+}
+
+/* Multi-channel digital colors */
+.value.orange {
+    color: var(--ch1-yellow);
+    /* Channel 1 Yellow */
+}
+
+.value.cyan {
+    color: var(--ch3-cyan);
+    /* Channel 3 Cyan */
+}
+
+/* Connector dropping down from screen - plastic molding */
+.connector-vertical {
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
+    /* Align vaguely with the right side */
+    width: 2px;
+    height: 2rem;
+    border-left: 1px solid var(--border-panel);
+    /* engraved line */
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8);
+    /* bevel */
+}
+
+@media (max-width: 768px) {
+    .led-screen {
+        padding: 1rem;
+    }
+
+    .screen-content {
+        font-size: 0.8rem;
+    }
+
+    .connector-vertical {
+        display: none;
+    }
+}

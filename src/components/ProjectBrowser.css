@@ -1,0 +1,151 @@
+.project-browser {
+    flex-grow: 1;
+    /* Soft cut-out in plastic shell */
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    padding: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -1px -1px 2px rgba(255, 255, 255, 0.7);
+}
+
+/* ================= INDEX MODE ================= */
+.list-container {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+    padding-right: 0.5rem;
+}
+
+.list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background: var(--device-case-dark);
+    border-radius: 4px;
+}
+
+/* On-screen menu look (black LCD style) */
+.list-item {
+    background-color: var(--device-screen);
+    border: 2px solid var(--bezel-color);
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    transition: all 0.2s ease;
+    color: var(--text-light);
+}
+
+.list-item:hover {
+    border-color: var(--ch1-yellow);
+}
+
+.list-item.active {
+    background-color: var(--text-dark);
+    /* Dark grey */
+    color: var(--ch1-yellow);
+    /* Yellow channel highlight */
+    border-color: var(--ch1-yellow);
+    box-shadow: 0 0 10px var(--ch1-yellow-glow);
+}
+
+.list-category {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+}
+
+.list-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ================= NUMS MODE (PADS) ================= */
+.pads-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5x6 grid */
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.midi-pad {
+    position: relative;
+    background-color: var(--button-base);
+    /* physical grey pads */
+    border: 1px solid var(--device-case-dark);
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.4rem;
+    transition: all 0.1s ease;
+    /* Soft physical shadow */
+    box-shadow:
+        inset 1px 1px 2px white,
+        2px 2px 4px rgba(0, 0, 0, 0.1),
+        0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.midi-pad:not(.empty):active {
+    box-shadow:
+        inset 1px 1px 4px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+/* Green Backlight for active Soft-Keys */
+.midi-pad.active {
+    background-color: var(--text-dark);
+    border-color: #222;
+    box-shadow:
+        inset 0 0 10px var(--ch4-green),
+        0 0 10px rgba(0, 255, 42, 0.4);
+}
+
+.midi-pad.active .pad-number {
+    color: var(--ch4-green);
+    font-weight: bold;
+}
+
+.midi-pad.empty {
+    opacity: 0.5;
+    background-color: #ddd;
+    box-shadow: none;
+    cursor: default;
+}
+
+.pad-number {
+    font-family: var(--font-sans);
+    /* Printed on the plastic */
+    font-size: 0.75rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .project-browser {
+        min-height: 400px;
+        /* Ensure lists don't collapse */
+    }
+
+    .pads-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* Slightly larger pads for touch */
+    }
+}
+
+@media (max-width: 480px) {
+    .pads-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns to prevent horizontal overflow on very small phones */
+    }
+}

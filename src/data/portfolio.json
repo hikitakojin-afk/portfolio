@@ -1,0 +1,119 @@
+{
+  "settings": {
+    "username": "TATSUKI HIKITA",
+    "profileImageUrl": "/images/IMG_1909.JPG",
+    "profileText": "Work Experience\n\n1996 兵庫県出身\n\n2018 関西学院大学 法学部 法律学科 卒業\n\n2018 株式会社カプコンに企画職として従事\n\n2022 JPUNIVERSE株式会社にゲームプランナーとして従事\n\n2025 フリーランスのゲームプランナーとして活動"
+  },
+  "items": [
+    {
+      "id": "1",
+      "type": "image",
+      "title": "LevelDesign_Testmap",
+      "description": "コンシューマーゲーム制作におけるテストマップ作成\nHoudini + Unreal Engine5 (BP)",
+      "thumbnail": "\\images\\map.png",
+      "contentUrl": "\\images\\map.png",
+      "category": "Videogame",
+      "year": "2025"
+    },
+    {
+      "id": "1772764835339",
+      "type": "video",
+      "title": "Houdini_Practice",
+      "description": "Houdiniの破壊表現・レンダリングのチュートリアル",
+      "thumbnail": "\\images\\videowork_3.mp4",
+      "contentUrl": "\\images\\videowork_3.mp4",
+      "category": "3DCG",
+      "year": "2025"
+    },
+    {
+      "id": "1772768374201",
+      "type": "video",
+      "title": "MixedReality_Practice",
+      "description": "MetaQuest3,MRユーティリティキットを使用したプラクティス",
+      "thumbnail": "\\images\\meta_MR_1.mp4",
+      "contentUrl": "\\images\\meta_MR_1.mp4",
+      "category": "Videogame",
+      "year": "2025"
+    },
+    {
+      "id": "1772769471678",
+      "type": "video",
+      "title": "MixedReality_Practice",
+      "description": "MetaQuest3,MRユーティリティキットを使用したプラクティス。\n自室をメッシュ化した様子。",
+      "thumbnail": "\\images\\meta_MR_2.mp4",
+      "contentUrl": "\\images\\meta_MR_2.mp4",
+      "category": "Videogame",
+      "year": "2025"
+    },
+    {
+      "id": "1772769631218",
+      "type": "video",
+      "title": "RealityCapture",
+      "description": "フォトグラメトリで自車をモデル化",
+      "thumbnail": "\\images\\modeling_1.mp4",
+      "contentUrl": "\\images\\modeling_1.mp4",
+      "category": "3DCG",
+      "year": "2025"
+    },
+    {
+      "id": "1772769718903",
+      "type": "video",
+      "title": "RealityCapture",
+      "description": "フォトグラメトリで作成したモデルをUnreal Engine上で配置",
+      "thumbnail": "\\images\\modeling_2.mp4",
+      "contentUrl": "\\images\\modeling_2.mp4",
+      "category": "3DCG",
+      "year": "2025"
+    },
+    {
+      "id": "1772769824140",
+      "type": "video",
+      "title": "Videowork_1",
+      "description": "Blenderでモデル・カメラ作成、レンダリング",
+      "thumbnail": "\\images\\videowork_1.mp4",
+      "contentUrl": "\\images\\videowork_1.mp4",
+      "category": "3DCG",
+      "year": "2025"
+    },
+    {
+      "id": "1772769936851",
+      "type": "video",
+      "title": "Videowork_2",
+      "description": "Blenderでモデル・カメラ作成、レンダリング",
+      "thumbnail": "\\images\\videowork_2.mp4",
+      "contentUrl": "\\images\\videowork_2.mp4",
+      "category": "3DCG",
+      "year": "2025"
+    },
+    {
+      "id": "1772770071987",
+      "type": "link",
+      "title": "World Peace Clicker",
+      "description": "人類全員がハートを押せばクリア。\nサイト上だけでも世界平和を実現したいという思いで作りました。\n※Antigravityにて作成",
+      "thumbnail": "\\images\\web1.png",
+      "contentUrl": "https://world-peace-clicker.vercel.app/",
+      "category": "Website",
+      "year": "2026"
+    },
+    {
+      "id": "1772770259170",
+      "type": "link",
+      "title": "Coin Toss Streak",
+      "description": "ポケポケのコイントスだけをひたすら遊びたいと思ったので作成\n※Antigravityにて作成",
+      "thumbnail": "\\images\\web2.png",
+      "contentUrl": "https://coin-toss-streak.vercel.app/",
+      "category": "Website",
+      "year": "2026"
+    },
+    {
+      "id": "1772770362771",
+      "type": "link",
+      "title": "怪現彷徨",
+      "description": "日本中の怪異や心霊の目撃情報を可視化・投稿できるようにし、心霊界隈を盛り上げるために作成。\n大島てる氏のサイトが発想元\n※Antigravityにて作成",
+      "thumbnail": "\\images\\web3.png",
+      "contentUrl": "https://spooky-map-six.vercel.app/",
+      "category": "Website",
+      "year": "2026"
+    }
+  ]
+}

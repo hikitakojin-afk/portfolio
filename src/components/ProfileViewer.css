@@ -1,0 +1,119 @@
+.profile-viewer-container {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.profile-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.profile-content-box {
+    background-color: #030803;
+    border: 2px solid var(--bezel-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    /* Allow scrolling for long history */
+    min-width: 0;
+    word-break: break-word;
+
+    /* ECG Grid Background */
+    background-image:
+        linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: center top;
+}
+
+/* Biohazard ECG Animated SVG Line */
+.profile-content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* Don't stretch to bottom, just a top header swoop */
+    height: 150px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='150' viewBox='0 0 400 150'%3E%3Cpath d='M0,75 L150,75 L160,50 L170,75 L190,75 L205,20 L220,130 L230,75 L250,75 L260,90 L270,75 L400,75' fill='none' stroke='%2339FF14' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' filter='drop-shadow(0 0 6px %2339FF14)'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: left top;
+    background-size: 400px 150px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.8;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 1) 95%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 1) 95%, transparent 100%);
+    -webkit-mask-size: 200% 100%;
+    mask-size: 200% 100%;
+    animation: ecg-sweep 2.5s infinite linear;
+}
+
+/* BIOHAZARD 'SYS' Watermark */
+.profile-content-box::after {
+    content: 'SYS. BIO';
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-sans);
+    color: #39FF14;
+    text-shadow: 0 0 10px #000, 0 0 20px #39FF14;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: 0.2rem;
+}
+
+.profile-text {
+    position: relative;
+    z-index: 1;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    /* Preserve line breaks from textarea */
+    font-family: var(--font-mono);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Scrollbar styling for profile text */
+.profile-content-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.profile-content-box::-webkit-scrollbar-thumb {
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .profile-viewer-container {
+        padding: 1rem;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
