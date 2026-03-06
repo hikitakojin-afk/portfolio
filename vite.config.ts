@@ -47,4 +47,8 @@ const portfolioSavePlugin = (): Plugin => {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), portfolioSavePlugin()],
+  server: {
+    port: 5173,
+    strictPort: true,
+  }
 })

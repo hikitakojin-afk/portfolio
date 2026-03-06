@@ -29,10 +29,10 @@ function App() {
         ? PORTFOLIO_DATA
         : PORTFOLIO_DATA.filter(work => work.category === filter);
 
-    // Secret Dev Tool Shortcut (Shift + E)
+    // Secret Dev Tool Shortcut (Ctrl + Shift + E)
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.shiftKey && e.code === 'KeyE') {
+            if (e.ctrlKey && e.shiftKey && e.code === 'KeyE') {
                 e.preventDefault();
                 setIsEditorOpen(prev => !prev);
             }
@@ -82,7 +82,7 @@ function App() {
                 {isEditorOpen && <PortfolioEditor onClose={() => setIsEditorOpen(false)} />}
                 <div className="device-wrapper">
                     <div className="device-shell" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', minHeight: '600px' }}>
-                        <h2>NO PORTFOLIO DATA (Press Shift+E to open Editor)</h2>
+                        <h2>NO PORTFOLIO DATA (Press Ctrl+Shift+E to open Editor)</h2>
                     </div>
                 </div>
             </>

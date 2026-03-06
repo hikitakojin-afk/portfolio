@@ -114,6 +114,16 @@
       "contentUrl": "https://spooky-map-six.vercel.app/",
       "category": "Website",
       "year": "2026"
+    },
+    {
+      "id": "1772809385461",
+      "type": "link",
+      "title": "物語の入り口",
+      "description": "小説の書き出しだけを日替わりで表示するサイト\nカリギュラ効果で、書き出しの文章だけのほうが\n人はより惹きつけられるかの実験でもある。\n※Antigravityにて作成",
+      "thumbnail": "\\images\\web4.png",
+      "contentUrl": "https://entrance-to-the-story.vercel.app/",
+      "category": "Website",
+      "year": "2026"
     }
   ]
 }
